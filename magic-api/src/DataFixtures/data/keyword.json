@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Vol",
+    "description": "permet à la créature d'attaquer sans ce faire bloqué sauf par portée"
+  },
+  {
+    "name": "contact mortel",
+    "description": "permet à la créature de détruire une créature bloquante"
+  },
+  {
+    "name": "lien de vie",
+    "description": "permet à la créature de soigner son contrôleur au montant de ces dégats"
+  }
+]

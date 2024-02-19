@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Fôret",
+    "icon": "forest.png"
+  },
+  {
+    "name": "Île",
+    "icon": "island.png"
+  },
+  {
+    "name": "Montagne",
+    "icon": "mountain.jpg"
+  },
+  {
+    "name": "Neutre",
+    "icon": "neutral.jpg"
+  },
+  {
+    "name": "Plaine",
+    "icon": "plain.png"
+  },
+  {
+    "name": "Marais",
+    "icon": "swamp.png"
+  }
+]

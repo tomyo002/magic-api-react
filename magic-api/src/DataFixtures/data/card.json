@@ -1,0 +1,40 @@
+[
+  {
+    "name": "Verrak, sengien dévoyé",
+    "subtype": "vampire",
+    "healthPoint": 2,
+    "attackPoint": 2,
+    "type": 4,
+    "extension": 4,
+    "rarity": "mythic"
+  },
+  {
+    "name": "Jaya, négociatrice ardente",
+    "subtype": "Jaya",
+    "loyalty": 4,
+    "type": 1,
+    "extension": 3,
+    "rarity": "mythic"
+  },
+  {
+    "name": "Myr argenté",
+    "subtype": "myr",
+    "healthPoint": 1,
+    "attackPoint": 1,
+    "type": 5,
+    "extension": 1,
+    "rarity": "commune"
+  },
+  {
+    "name": "Pluie en fusion",
+    "type": 7,
+    "extension": 1,
+    "rarity": "commune"
+  },
+  {
+    "name": "Folie furieuse",
+    "type": 6,
+    "extension": 2,
+    "rarity": "commune"
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "name": "planeswalker légendaire",
+    "description": "il est unique dans le deck, peuvent être attaquer par les créatures et peut être commandant"
+  },
+  {
+    "name": "planeswalker",
+    "description": "peut être attaquer par les créatures et peut être commandant"
+  },
+  {
+    "name": "créature",
+    "description": "sort permanent qui permet au contrôleur d'utiliser la créature pour attaquer l'autre contrôleur pendant la phase de combat"
+  },
+  {
+    "name": "créature légendaire",
+    "description": "sort permanent qui permet au contrôleur d'utiliser la créature pour attaquer l'autre contrôleur pendant la phase de combat,il est unique"
+  },
+  {
+    "name": "créature-artefact",
+    "description": "sort permanent qui permet au contrôleur d'utiliser la créature pour attaquer l'autre contrôleur pendant la phase de combat"
+  },
+  {
+    "name": "éphemère",
+    "description": "sort qui peut être lancer pendant la phase de combat, fini à la fin du tour"
+  },
+  {
+    "name": "rituel",
+    "description": "sort qui ne peut être lancer pendant la phase de combat, fini à la fin du tour"
+  }
+]

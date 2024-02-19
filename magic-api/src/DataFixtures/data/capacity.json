@@ -1,0 +1,22 @@
+[
+  {
+    "card": 1,
+    "description": "À chaque fois que vous activez une capacité qui n'est pas une capacité de mana, si des points de vie ont été payés pour l'activer, vous pouvez payer à nouveau autant de points de vie. Si vous faites ainsi, copiez cette capacité. Vous pouvez choisir de nouvelles cibles pour cette copie."
+  },
+  {
+    "card": 2,
+    "description": "(+1)Créez une jeton de créature 1/1 rouge Moine avec la prouesse.\n(-1)Exilez les deux cartes du dessus de votre bibliothèque. Choisissez l'une d'elles. Vous pouvez jouer cette carte ce tour-ci.\n(-2)Choisissez une créature ciblée qu'un adversaire contrôle. À chaque fois que vous attaquez ce tour-ci, Jaya, négociatrice ardente inflige un nombre de blessures égal au nombre de créatures attaquantes à cette créature.\n(-8)Vous gagnez un emblème avec ' À chaque fois que vous lancez un sort d'éphémère ou de rituel rouge, copiez-le deux fois. Vous pouvez choisir de nouvelles cibles pour ces copies.'"
+  },
+  {
+    "card": 3,
+    "description":" (engagé): (île) Ajoutez à votre réserve."
+  },
+  {
+    "card": 4,
+    "description":"Détruisez le terrain ciblé. Si ce terrain était non-base, la Pluie en fusion inflige 2 blessures au contrôleur du terrain."
+  },
+  {
+    "card": 5,
+    "description": "La créature attaquante ciblée gagne +3/+3 et acquiert le piétinement jusqu'à la fin du tour."
+  }
+]
