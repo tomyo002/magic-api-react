@@ -20,7 +20,7 @@ class Card
     #[ORM\Column(length: 100)]
     private ?string $name = null;
 
-    #[ORM\Column(length: 20)]
+    #[ORM\Column(length: 20, nullable: true)]
     private ?string $Subtype = null;
 
     #[ORM\Column(nullable: true)]
@@ -43,15 +43,18 @@ class Card
 
     #[ORM\OneToMany(targetEntity: Capacity::class, mappedBy: 'card')]
     private Collection $capacities;
+    #[ORM\Column(length: 10)]
+    private ?string $rarity = null;
 
-    #[ORM\ManyToMany(targetEntity: Keyword::class, mappedBy: 'card')]
-    private Collection $keywords;
+    #[ORM\OneToMany(targetEntity: KeywordCard::class, mappedBy: 'card')]
+    private Collection $keywordCards;
 
     public function __construct()
     {
         $this->costs = new ArrayCollection();
         $this->capacities = new ArrayCollection();
         $this->keywords = new ArrayCollection();
+        $this->keywordCards = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -225,6 +228,48 @@ class Card
     {
         if ($this->keywords->removeElement($keyword)) {
             $keyword->removeCard($this);
+        }
+
+        return $this;
+    }
+
+    public function getRarity(): ?string
+    {
+        return $this->rarity;
+    }
+
+    public function setRarity(string $rarity): static
+    {
+        $this->rarity = $rarity;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, KeywordCard>
+     */
+    public function getKeywordCards(): Collection
+    {
+        return $this->keywordCards;
+    }
+
+    public function addKeywordCard(KeywordCard $keywordCard): static
+    {
+        if (!$this->keywordCards->contains($keywordCard)) {
+            $this->keywordCards->add($keywordCard);
+            $keywordCard->setCard($this);
+        }
+
+        return $this;
+    }
+
+    public function removeKeywordCard(KeywordCard $keywordCard): static
+    {
+        if ($this->keywordCards->removeElement($keywordCard)) {
+            // set the owning side to null (unless already changed)
+            if ($keywordCard->getCard() === $this) {
+                $keywordCard->setCard(null);
+            }
         }
 
         return $this;

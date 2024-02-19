@@ -20,13 +20,13 @@ class Keyword
 
     #[ORM\Column(length: 1000)]
     private ?string $description = null;
-
-    #[ORM\ManyToMany(targetEntity: Card::class, inversedBy: 'keywords')]
-    private Collection $card;
+    #[ORM\OneToMany(targetEntity: KeywordCard::class, mappedBy: 'keyword')]
+    private Collection $keywordCards;
 
     public function __construct()
     {
         $this->card = new ArrayCollection();
+        $this->keywordCards = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -78,6 +78,36 @@ class Keyword
     public function removeCard(Card $card): static
     {
         $this->card->removeElement($card);
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, KeywordCard>
+     */
+    public function getKeywordCards(): Collection
+    {
+        return $this->keywordCards;
+    }
+
+    public function addKeywordCard(KeywordCard $keywordCard): static
+    {
+        if (!$this->keywordCards->contains($keywordCard)) {
+            $this->keywordCards->add($keywordCard);
+            $keywordCard->setKeyword($this);
+        }
+
+        return $this;
+    }
+
+    public function removeKeywordCard(KeywordCard $keywordCard): static
+    {
+        if ($this->keywordCards->removeElement($keywordCard)) {
+            // set the owning side to null (unless already changed)
+            if ($keywordCard->getKeyword() === $this) {
+                $keywordCard->setKeyword(null);
+            }
+        }
 
         return $this;
     }
