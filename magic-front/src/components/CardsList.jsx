@@ -9,7 +9,7 @@ function CardsList() {
     fetchAllCards().then((answer) => setCardsData(answer["hydra:member"]));
   }, []);
   const lstCards = cardsData.map((card) => (
-    <div className="card">
+    <div className="card" key={card.id}>
       <article className="card__header header__title">
         {card.name} <CostCard costs={card.costs} />
       </article>
