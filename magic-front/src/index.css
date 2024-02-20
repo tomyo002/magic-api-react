@@ -142,3 +142,11 @@ html, body, #root {
   font-family: inherit;
   cursor: pointer;
 }
+.article__card{
+  display: flex;
+  justify-content: space-between;
+}
+.icon{
+  width: 20px;
+  height: 20px;
+}
