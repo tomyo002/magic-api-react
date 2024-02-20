@@ -10,5 +10,9 @@
   {
     "name": "lien de vie",
     "description": "permet à la créature de soigner son contrôleur au montant de ces dégats"
+  },
+  {
+    "name": "piétinement",
+    "description": "dégat execif sont infligées au contrôleur"
   }
 ]

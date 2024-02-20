@@ -18,5 +18,13 @@
   {
     "card": 5,
     "description": "La créature attaquante ciblée gagne +3/+3 et acquiert le piétinement jusqu'à la fin du tour."
+  },
+  {
+    "card": 6,
+    "description": "Seuil – (1)(foret): Régénérez la Vengeresse krosiane. (Ne jouez cette capacité que s'il y a sept cartes ou plus dans votre cimetière.)"
+  },
+  {
+    "card": 7,
+    "description": "Kick (2)(île) (Vous pouvez payer (2)(île) supplémentaires au moment où vous lancez ce sort.)\n\nPiochez deux cartes. Si ce sort a été kické, piochez trois cartes à la place."
   }
 ]

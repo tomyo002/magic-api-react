@@ -48,5 +48,25 @@
     "card": 1,
     "element": 6,
     "number": 1
+  },
+  {
+    "card": 6,
+    "element": 4,
+    "number": 2
+  },
+  {
+    "card": 6,
+    "element": 1,
+    "number": 1
+  },
+  {
+    "card": 7,
+    "element": 4,
+    "number": 2
+  },
+  {
+    "card": 7,
+    "element": 2,
+    "number": 1
   }
 ]

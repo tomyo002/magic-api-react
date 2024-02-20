@@ -10,5 +10,9 @@
   {
     "card": 1,
     "keyword":3
+  },
+  {
+    "card": 6,
+    "keyword": 4
   }
 ]

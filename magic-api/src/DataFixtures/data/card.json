@@ -36,5 +36,20 @@
     "type": 6,
     "extension": 2,
     "rarity": "commune"
+  },
+  {
+    "name": "Vengeresse krosiane",
+    "subtype": "druide",
+    "healthPoint": 3,
+    "attackPoint": 1,
+    "type": 3,
+    "extension": 5,
+    "rarity": "commune"
+  },
+  {
+    "name": "recherches sur le terrain",
+    "type": 7,
+    "extension": 6,
+    "rarity": "commune"
   }
 ]
