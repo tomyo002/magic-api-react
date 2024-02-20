@@ -10,7 +10,7 @@ use Doctrine\Migrations\AbstractMigration;
 /**
  * Auto-generated Migration: Please modify to your needs!
  */
-final class Version20240219204920 extends AbstractMigration
+final class Version20240220095627 extends AbstractMigration
 {
     public function getDescription(): string
     {
@@ -23,7 +23,7 @@ final class Version20240219204920 extends AbstractMigration
         $this->addSql('CREATE TABLE capacity (id INT AUTO_INCREMENT NOT NULL, card_id INT DEFAULT NULL, description VARCHAR(1000) NOT NULL, INDEX IDX_B5E8B1744ACC9A20 (card_id), PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');
         $this->addSql('CREATE TABLE card (id INT AUTO_INCREMENT NOT NULL, type_id INT DEFAULT NULL, extension_id INT DEFAULT NULL, name VARCHAR(100) NOT NULL, subtype VARCHAR(20) DEFAULT NULL, health_point INT DEFAULT NULL, attack_point INT DEFAULT NULL, loyalty INT DEFAULT NULL, rarity VARCHAR(10) NOT NULL, INDEX IDX_161498D3C54C8C93 (type_id), INDEX IDX_161498D3812D5EB (extension_id), PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');
         $this->addSql('CREATE TABLE cost (id INT AUTO_INCREMENT NOT NULL, card_id INT DEFAULT NULL, element_id INT DEFAULT NULL, number INT NOT NULL, INDEX IDX_182694FC4ACC9A20 (card_id), INDEX IDX_182694FC1F1F2A24 (element_id), PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');
-        $this->addSql('CREATE TABLE element (id INT AUTO_INCREMENT NOT NULL, name VARCHAR(10) NOT NULL, icon LONGBLOB NOT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');
+        $this->addSql('CREATE TABLE element (id INT AUTO_INCREMENT NOT NULL, name VARCHAR(10) NOT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');
         $this->addSql('CREATE TABLE extension (id INT AUTO_INCREMENT NOT NULL, name VARCHAR(50) NOT NULL, release_year VARCHAR(9) NOT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');
         $this->addSql('CREATE TABLE keyword (id INT AUTO_INCREMENT NOT NULL, name VARCHAR(20) NOT NULL, description VARCHAR(1000) NOT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');
         $this->addSql('CREATE TABLE keyword_card (id INT AUTO_INCREMENT NOT NULL, card_id INT DEFAULT NULL, keyword_id INT DEFAULT NULL, INDEX IDX_F14215D14ACC9A20 (card_id), INDEX IDX_F14215D1115D4552 (keyword_id), PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');
