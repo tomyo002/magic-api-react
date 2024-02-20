@@ -2,10 +2,16 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Metadata\ApiResource;
+use ApiPlatform\Metadata\Get;
+use ApiPlatform\Metadata\GetCollection;
 use App\Repository\KeywordCardRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: KeywordCardRepository::class)]
+#[ApiResource]
+#[Get]
+#[GetCollection]
 class KeywordCard
 {
     #[ORM\Id]
