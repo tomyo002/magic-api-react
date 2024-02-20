@@ -2,12 +2,19 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Metadata\ApiProperty;
+use ApiPlatform\Metadata\ApiResource;
+use ApiPlatform\Metadata\Get;
+use ApiPlatform\Metadata\GetCollection;
 use App\Repository\KeywordRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: KeywordRepository::class)]
+#[ApiResource]
+#[Get]
+#[GetCollection]
 class Keyword
 {
     #[ORM\Id]
@@ -21,11 +28,11 @@ class Keyword
     #[ORM\Column(length: 1000)]
     private ?string $description = null;
     #[ORM\OneToMany(targetEntity: KeywordCard::class, mappedBy: 'keyword')]
+    #[ApiProperty(example: 'api/keywordCard/0')]
     private Collection $keywordCards;
 
     public function __construct()
     {
-        $this->card = new ArrayCollection();
         $this->keywordCards = new ArrayCollection();
     }
 
@@ -54,30 +61,6 @@ class Keyword
     public function setDescription(string $description): static
     {
         $this->description = $description;
-
-        return $this;
-    }
-
-    /**
-     * @return Collection<int, Card>
-     */
-    public function getCard(): Collection
-    {
-        return $this->card;
-    }
-
-    public function addCard(Card $card): static
-    {
-        if (!$this->card->contains($card)) {
-            $this->card->add($card);
-        }
-
-        return $this;
-    }
-
-    public function removeCard(Card $card): static
-    {
-        $this->card->removeElement($card);
 
         return $this;
     }
