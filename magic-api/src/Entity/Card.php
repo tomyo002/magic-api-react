@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use ApiPlatform\Metadata\ApiResource;
+use ApiPlatform\Metadata\Get;
+use ApiPlatform\Metadata\GetCollection;
 use App\Repository\CardRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
@@ -10,6 +12,8 @@ use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: CardRepository::class)]
 #[ApiResource]
+#[Get]
+#[GetCollection]
 class Card
 {
     #[ORM\Id]
@@ -36,6 +40,7 @@ class Card
     private ?Type $type = null;
 
     #[ORM\ManyToOne(inversedBy: 'cards')]
+    #[Ap]
     private ?Extension $extension = null;
 
     #[ORM\OneToMany(targetEntity: Cost::class, mappedBy: 'card')]
@@ -53,7 +58,6 @@ class Card
     {
         $this->costs = new ArrayCollection();
         $this->capacities = new ArrayCollection();
-        $this->keywords = new ArrayCollection();
         $this->keywordCards = new ArrayCollection();
     }
 
@@ -206,32 +210,6 @@ class Card
         return $this;
     }
 
-    /**
-     * @return Collection<int, Keyword>
-     */
-    public function getKeywords(): Collection
-    {
-        return $this->keywords;
-    }
-
-    public function addKeyword(Keyword $keyword): static
-    {
-        if (!$this->keywords->contains($keyword)) {
-            $this->keywords->add($keyword);
-            $keyword->addCard($this);
-        }
-
-        return $this;
-    }
-
-    public function removeKeyword(Keyword $keyword): static
-    {
-        if ($this->keywords->removeElement($keyword)) {
-            $keyword->removeCard($this);
-        }
-
-        return $this;
-    }
 
     public function getRarity(): ?string
     {
