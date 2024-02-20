@@ -47,7 +47,6 @@ final class ElementFactory extends ModelFactory
     protected function getDefaults(): array
     {
         return [
-            'icon' => file_get_contents(__DIR__.'/../../public/images/neutral.jpg'),
             'name' => self::faker()->text(10),
         ];
     }

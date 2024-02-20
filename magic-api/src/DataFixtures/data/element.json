@@ -1,26 +1,20 @@
 [
   {
-    "name": "Fôret",
-    "icon": "forest.png"
+    "name": "Fôret"
   },
   {
-    "name": "Île",
-    "icon": "island.png"
+    "name": "Île"
   },
   {
-    "name": "Montagne",
-    "icon": "mountain.jpg"
+    "name": "Montagne"
   },
   {
-    "name": "Neutre",
-    "icon": "neutral.jpg"
+    "name": "Neutre"
   },
   {
-    "name": "Plaine",
-    "icon": "plain.png"
+    "name": "Plaine"
   },
   {
-    "name": "Marais",
-    "icon": "swamp.png"
+    "name": "Marais"
   }
 ]
