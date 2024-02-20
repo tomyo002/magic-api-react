@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import { fetchCost, fetchElement } from "../services/api/Costs";
+import {fetchCost, fetchElement} from "../services/api/Costs";
 
 function Cost({ cost = "" }) {
   const [costData, setCostData] = useState([]);
@@ -8,12 +8,12 @@ function Cost({ cost = "" }) {
   useEffect(() => {
     fetchCost(cost).then((answer) => {setCostData(answer);
       fetchElement(answer.element).then((answer) =>
-          setElementData(answer),
+          setElementData(answer)
       );});
   }, []);
   return (
     <div>
-      {costData.number} {elementData.name}
+      {costData.number} <img className="icon" src={`http://localhost:8000${costData.element}/icon`}  alt={elementData.name}/>
     </div>
   );
 }

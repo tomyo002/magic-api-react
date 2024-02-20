@@ -10,8 +10,8 @@ function CardsList() {
   }, []);
   const lstCards = cardsData.map((card) => (
     <div className="card" key={card.id}>
-      <article className="card__header header__title">
-        {card.name} <CostCard costs={card.costs} />
+      <article className="card__header header__title article__card">
+        {card.name} <div><CostCard costs={card.costs} /></div>
       </article>
     </div>
   ));
