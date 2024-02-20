@@ -1,0 +1,26 @@
+[
+  {
+    "element": "1",
+    "icon": "forest.png"
+  },
+  {
+    "element": "2",
+    "icon": "island.png"
+  },
+  {
+    "element": "3",
+    "icon": "mountain.jpg"
+  },
+  {
+    "element": "4",
+    "icon": "neutral.jpg"
+  },
+  {
+    "element": "5",
+    "icon": "plain.png"
+  },
+  {
+    "element": "6",
+    "icon": "swamp.png"
+  }
+]
