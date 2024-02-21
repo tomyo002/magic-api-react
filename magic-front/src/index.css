@@ -150,3 +150,17 @@ html, body, #root {
   width: 20px;
   height: 20px;
 }
+.picture {
+  display: flex;
+}
+.picture__header {
+  display: flex;
+  flex-direction: column;
+}
+.picture__detail{
+  display: flex;
+  justify-content: flex-end;
+}
+.picture__size{
+  width: 100px;
+}
