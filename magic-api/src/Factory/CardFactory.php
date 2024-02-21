@@ -11,21 +11,21 @@ use Zenstruck\Foundry\RepositoryProxy;
 /**
  * @extends ModelFactory<Card>
  *
- * @method        Card|Proxy create(array|callable $attributes = [])
- * @method static Card|Proxy createOne(array $attributes = [])
- * @method static Card|Proxy find(object|array|mixed $criteria)
- * @method static Card|Proxy findOrCreate(array $attributes)
- * @method static Card|Proxy first(string $sortedField = 'id')
- * @method static Card|Proxy last(string $sortedField = 'id')
- * @method static Card|Proxy random(array $attributes = [])
- * @method static Card|Proxy randomOrCreate(array $attributes = [])
+ * @method        Card|Proxy                     create(array|callable $attributes = [])
+ * @method static Card|Proxy                     createOne(array $attributes = [])
+ * @method static Card|Proxy                     find(object|array|mixed $criteria)
+ * @method static Card|Proxy                     findOrCreate(array $attributes)
+ * @method static Card|Proxy                     first(string $sortedField = 'id')
+ * @method static Card|Proxy                     last(string $sortedField = 'id')
+ * @method static Card|Proxy                     random(array $attributes = [])
+ * @method static Card|Proxy                     randomOrCreate(array $attributes = [])
  * @method static CardRepository|RepositoryProxy repository()
- * @method static Card[]|Proxy[] all()
- * @method static Card[]|Proxy[] createMany(int $number, array|callable $attributes = [])
- * @method static Card[]|Proxy[] createSequence(iterable|callable $sequence)
- * @method static Card[]|Proxy[] findBy(array $attributes)
- * @method static Card[]|Proxy[] randomRange(int $min, int $max, array $attributes = [])
- * @method static Card[]|Proxy[] randomSet(int $number, array $attributes = [])
+ * @method static Card[]|Proxy[]                 all()
+ * @method static Card[]|Proxy[]                 createMany(int $number, array|callable $attributes = [])
+ * @method static Card[]|Proxy[]                 createSequence(iterable|callable $sequence)
+ * @method static Card[]|Proxy[]                 findBy(array $attributes)
+ * @method static Card[]|Proxy[]                 randomRange(int $min, int $max, array $attributes = [])
+ * @method static Card[]|Proxy[]                 randomSet(int $number, array $attributes = [])
  */
 final class CardFactory extends ModelFactory
 {
@@ -48,6 +48,8 @@ final class CardFactory extends ModelFactory
     {
         return [
             'name' => self::faker()->text(100),
+            'url' => self::faker()->text(100),
+            'pictureUrl' => self::faker()->text(100),
         ];
     }
 

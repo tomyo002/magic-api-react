@@ -28,6 +28,8 @@ class CardFixtures extends Fixture implements DependentFixtureInterface
                         'type' => TypeFactory::find(['id' => $t['type']]),
                         'extension' => ExtensionFactory::find(['id' => $t['extension']]),
                         'rarity' => $t['rarity'],
+                        'url' => $t['url'],
+                        'pictureUrl' => $t['pictureUrl'],
                         ]
                 );
             } elseif (isset($t['loyalty'])) {
@@ -39,6 +41,8 @@ class CardFixtures extends Fixture implements DependentFixtureInterface
                         'type' => TypeFactory::find(['id' => $t['type']]),
                         'extension' => ExtensionFactory::find(['id' => $t['extension']]),
                         'rarity' => $t['rarity'],
+                        'url' => $t['url'],
+                        'pictureUrl' => $t['pictureUrl'],
                     ]
                 );
             } else {
@@ -48,6 +52,8 @@ class CardFixtures extends Fixture implements DependentFixtureInterface
                         'type' => TypeFactory::find(['id' => $t['type']]),
                         'extension' => ExtensionFactory::find(['id' => $t['extension']]),
                         'rarity' => $t['rarity'],
+                        'url' => $t['url'],
+                        'pictureUrl' => $t['pictureUrl'],
                     ]);
             }
         }

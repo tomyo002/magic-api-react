@@ -6,7 +6,9 @@
     "attackPoint": 2,
     "type": 4,
     "extension": 4,
-    "rarity": "mythic"
+    "rarity": "mythic",
+    "url": "https://www.magic-ville.com/fr/carte?ref=dmc016",
+    "pictureUrl": "https://www.magic-ville.com/pics/big/dmcFR/016.jpg"
   },
   {
     "name": "Jaya, négociatrice ardente",
@@ -14,7 +16,9 @@
     "loyalty": 4,
     "type": 1,
     "extension": 3,
-    "rarity": "mythic"
+    "rarity": "mythic",
+    "url": "https://www.magic-ville.com/fr/carte?ref=dmu133",
+    "pictureUrl": "https://www.magic-ville.com/pics/big/dmuFR/133.jpg"
   },
   {
     "name": "Myr argenté",
@@ -23,19 +27,25 @@
     "attackPoint": 1,
     "type": 5,
     "extension": 1,
-    "rarity": "commune"
+    "rarity": "commune",
+    "url":"https://www.magic-ville.com/fr/carte?ref=nec158",
+    "pictureUrl": "https://www.magic-ville.com/pics/big/necFR/158.jpg"
   },
   {
     "name": "Pluie en fusion",
     "type": 7,
     "extension": 1,
-    "rarity": "commune"
+    "rarity": "commune",
+    "url": "https://www.magic-ville.com/fr/carte?ref=mrd101",
+    "pictureUrl": "https://www.magic-ville.com/pics/big/mrd/101.jpg"
   },
   {
     "name": "Folie furieuse",
     "type": 6,
     "extension": 2,
-    "rarity": "commune"
+    "rarity": "commune",
+    "url": "https://www.magic-ville.com/fr/carte?ref=khm147",
+    "pictureUrl": "https://www.magic-ville.com/pics/big/khmFR/147.jpg"
   },
   {
     "name": "Vengeresse krosiane",
@@ -44,12 +54,16 @@
     "attackPoint": 1,
     "type": 3,
     "extension": 5,
-    "rarity": "commune"
+    "rarity": "commune",
+    "url": "https://www.magic-ville.com/fr/carte?ref=ody247",
+    "pictureUrl": "https://www.magic-ville.com/pics/big/ody/247.jpg"
   },
   {
     "name": "recherches sur le terrain",
     "type": 7,
     "extension": 6,
-    "rarity": "commune"
+    "rarity": "commune",
+    "url": "https://www.magic-ville.com/fr/carte?ref=znr058",
+    "pictureUrl": "https://www.magic-ville.com/pics/big/znrFR/058.jpg"
   }
 ]
