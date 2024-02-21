@@ -1,0 +1,30 @@
+[
+  {
+    "card": 1,
+    "picture": "verrak.jpg"
+  },
+  {
+    "card": 2,
+    "picture": "jaya.jpg"
+  },
+  {
+    "card": 3,
+    "picture": "myr_argenté.jpg"
+  },
+  {
+    "card": 4,
+    "picture": "pluieFusion.jpg"
+  },
+  {
+    "card": 5,
+    "picture": "folieFurieuse.jpg"
+  },
+  {
+    "card": 6,
+    "picture": "vengeresseKrosiane.jpg"
+  },
+  {
+    "card": 7,
+    "picture": "recherchesTerrains.jpg"
+  }
+]
