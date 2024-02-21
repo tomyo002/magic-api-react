@@ -50,15 +50,15 @@ function CardsDetails({ id = "" }) {
         {" "}
         <div className="card__header header__title">Description</div>
         {!cardData.subtype ? "" : <div>Sous-type : {cardData.subtype}</div>}
-        {!cardData.healthPoint ? (
-          ""
-        ) : (
-          <div>Point de vie : {cardData.healthPoint}</div>
-        )}
         {!cardData.attackPoint ? (
           ""
         ) : (
           <div> Point d'attaque : {cardData.attackPoint}</div>
+        )}
+        {!cardData.healthPoint ? (
+          ""
+        ) : (
+          <div>Point de vie : {cardData.healthPoint}</div>
         )}
         {!cardData.loyalty ? "" : <div>Loyauté : {cardData.loyalty}</div>}
         <div>Rareté : {cardData.rarity}</div>

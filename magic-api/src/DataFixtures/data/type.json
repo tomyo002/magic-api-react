@@ -1,30 +1,47 @@
 [
   {
-    "name": "planeswalker légendaire",
-    "description": "il est unique dans le deck, peuvent être attaquer par les créatures et peut être commandant"
+    "name": "Planeswalker légendaire",
+    "description": "Il est unique dans le deck. Permet au contôleur d'avoir des compétences unique utilisable 1 fois par tour. Peuvent être ciblé pendant la phase d'attaque du contrôleur adverse et ne peut pas attaquer"
   },
   {
-    "name": "planeswalker",
-    "description": "peut être attaquer par les créatures et peut être commandant"
+    "name": "Planeswalker",
+    "description": "Permet au contôleur d'avoir des compétences unique utilisable 1 fois par tour. Peuvent être ciblé pendant la phase d'attaque du contrôleur adverse et ne peut pas attaquer."
   },
   {
-    "name": "créature",
-    "description": "sort permanent qui permet au contrôleur d'utiliser la créature pour attaquer l'autre contrôleur pendant la phase de combat"
+    "name": "Créature",
+    "description": "Sort permanent qui permet au contrôleur d'avoir une créature pour attaquer l'autre contrôleur pendant la phase de combat ou pour défendre."
   },
   {
-    "name": "créature légendaire",
-    "description": "sort permanent qui permet au contrôleur d'utiliser la créature pour attaquer l'autre contrôleur pendant la phase de combat,il est unique"
+    "name": "Créature légendaire",
+    "description": "Sort permanent qui permet au contrôleur d'avoir une créature pour attaquer l'autre contrôleur pendant la phase de combat ou pour défendre. Il est unique dans le deck"
   },
   {
-    "name": "créature-artefact",
-    "description": "sort permanent qui permet au contrôleur d'utiliser la créature pour attaquer l'autre contrôleur pendant la phase de combat"
+    "name": "Créature-artefact",
+    "description": "Sort permanent qui permet au contrôleur d'avoir une créature pour attaquer l'autre contrôleur pendant la phase de combat ou pour défendre."
   },
   {
-    "name": "éphemère",
-    "description": "sort qui peut être lancer pendant la phase de combat, fini à la fin du tour"
+    "name": "Ephemère",
+    "description": "Sort éphemère qui peut se lancer pendant la phase de combat, fini à la fin du tour"
   },
   {
-    "name": "rituel",
-    "description": "sort qui ne peut être lancer pendant la phase de combat, fini à la fin du tour"
+    "name": "Rituel",
+    "description": "Sort éphemère qui ne peut se lancer pendant la phase de combat, fini à la fin du tour"
+  },
+  {
+    "name": "Artefact",
+    "description": "Sort permanent qui donne un avantage au cour de la partie. Souvent, la carte doit se faire engagé pour l'utiliser."
+  },
+  {
+    "name": "Artefact-équipement",
+    "description": "Sort permanent qui donne un avantage au cour de la partie. Il doit être équipé sur une créature. Si la créature meurt, l'équipement ne va pas au cimetière."
+  },
+
+  {
+    "name": "Enchantement-aura",
+    "description": "Sort permanent qui donne un avantage au cour de la partie. Il doit enchanté une créature. Si la créature meurt, l'enchantement va au cimetière."
+  },
+  {
+    "name": "Enchantement",
+    "description": "Sort permanent qui donne un avantage au cour de la partie. Donne souvent un passif."
   }
 ]

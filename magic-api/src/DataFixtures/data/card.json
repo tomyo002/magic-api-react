@@ -59,11 +59,38 @@
     "pictureUrl": "https://www.magic-ville.com/pics/big/ody/247.jpg"
   },
   {
-    "name": "recherches sur le terrain",
+    "name": "Recherches sur le terrain",
     "type": 7,
     "extension": 6,
     "rarity": "commune",
     "url": "https://www.magic-ville.com/fr/carte?ref=znr058",
     "pictureUrl": "https://www.magic-ville.com/pics/big/znrFR/058.jpg"
+  },
+  {
+    "name": "Bâton du conteur",
+    "type": 8,
+    "extension": 7,
+    "rarity": "rare",
+    "url": "https://www.magic-ville.com/fr/carte?ref=onc010",
+    "pictureUrl": "https://www.magic-ville.com/pics/big/oncFR/010.jpg"
+  },
+  {
+    "name": "Étrange augmentation",
+    "type": 10,
+    "extension": 8 ,
+    "rarity": "commune",
+    "url": "https://www.magic-ville.com/fr/carte?ref=emn105",
+    "pictureUrl": "https://www.magic-ville.com/pics/big/emnFR/105.jpg"
+  },
+  {
+    "name": "Marmouset piquant",
+    "subtype": "singe",
+    "healthPoint": 3,
+    "attackPoint": 2,
+    "type": 3,
+    "extension": 9,
+    "rarity": "commune",
+    "url": "https://www.magic-ville.com/fr/carte?ref=iko129",
+    "pictureUrl": "https://www.magic-ville.com/pics/big/ikoFR/129.jpg"
   }
 ]

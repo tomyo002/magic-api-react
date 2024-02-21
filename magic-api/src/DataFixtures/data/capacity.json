@@ -26,5 +26,17 @@
   {
     "card": 7,
     "description": "Kick (2)(île) (Vous pouvez payer (2)(île) supplémentaires au moment où vous lancez ce sort.)\n\nPiochez deux cartes. Si ce sort a été kické, piochez trois cartes à la place."
+  },
+  {
+    "card": 8,
+    "description": "Quand le Bâton du conteur arrive sur le champ de bataille, créez un jeton de créature 1/1 blanche Esprit avec le vol.\nÀ chaque fois que vous créez au moins un jeton de créature, mettez un marqueur \"histoire\" sur le Bâton du conteur.\n(plaine), (engager), retirez un marqueur \"histoire\" du Bâton du conteur : Piochez une carte."
+  },
+  {
+    "card": 9,
+    "description": "Enchanter : créature\nLa créature enchantée gagne +1/+1.\nDélire — La créature enchantée gagne un +2/+2 supplémentaire tant qu'il y a au moins quatre types de carte parmi les cartes de votre cimetière."
+  },
+  {
+    "card": 10,
+    "description": "À chaque fois que vous recyclez une carte, le Marmouset piquant gagne +2/+0 jusqu'à la fin du tour.\n"
   }
 ]

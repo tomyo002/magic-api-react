@@ -26,5 +26,17 @@
   {
     "card": 7,
     "picture": "recherchesTerrains.jpg"
+  },
+  {
+    "card": 8,
+    "picture": "batonConteur.jpg"
+  },
+  {
+    "card": 9,
+    "picture": "étrangeAugm.jpg"
+  },
+  {
+    "card": 10,
+    "picture": "marmouset.jpg"
   }
 ]

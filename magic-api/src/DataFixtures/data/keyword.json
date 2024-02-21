@@ -1,18 +1,26 @@
 [
   {
     "name": "Vol",
-    "description": "permet à la créature d'attaquer sans ce faire bloqué sauf par portée"
+    "description": "Permet à la créature d'attaquer sans ce faire bloqué par d'autre créature sauf si il a portée."
   },
   {
-    "name": "contact mortel",
-    "description": "permet à la créature de détruire une créature bloquante"
+    "name": "Contact mortel",
+    "description": "Permet à la créature de détruire une créature bloquante"
   },
   {
-    "name": "lien de vie",
-    "description": "permet à la créature de soigner son contrôleur au montant de ces dégats"
+    "name": "Lien de vie",
+    "description": "Permet à la créature de soigner son contrôleur au montant de ces dégats"
   },
   {
-    "name": "piétinement",
-    "description": "dégat execif sont infligées au contrôleur"
+    "name": "Piétinement",
+    "description": "Les dégats execif sont infligées au contrôleur"
+  },
+  {
+    "name": "Portée",
+    "description": "Permet à la créature de défendre des créatures qui ont vol."
+  },
+  {
+    "name": "Initiative",
+    "description": "Permet à la créature d'attaquer avant son défenseur pendant la phase d'attaque"
   }
 ]
