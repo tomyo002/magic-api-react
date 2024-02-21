@@ -54,6 +54,12 @@ class Card
     #[ORM\OneToMany(targetEntity: KeywordCard::class, mappedBy: 'card')]
     private Collection $keywordCards;
 
+    #[ORM\Column(length: 255)]
+    private ?string $url = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $pictureUrl = null;
+
     public function __construct()
     {
         $this->costs = new ArrayCollection();
@@ -249,6 +255,30 @@ class Card
                 $keywordCard->setCard(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getUrl(): ?string
+    {
+        return $this->url;
+    }
+
+    public function setUrl(string $url): static
+    {
+        $this->url = $url;
+
+        return $this;
+    }
+
+    public function getPictureUrl(): ?string
+    {
+        return $this->pictureUrl;
+    }
+
+    public function setPictureUrl(string $pictureUrl): static
+    {
+        $this->pictureUrl = $pictureUrl;
 
         return $this;
     }
