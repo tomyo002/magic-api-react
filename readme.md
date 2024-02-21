@@ -45,7 +45,7 @@ Lancez le serveur Web local avec cette commande :
 composer start
 ```
 ### Accès au serveur Web
-Naviguez alors à partir de cette adresse : <http://localhost:8000>
+Naviguez alors à partir de cette adresse : <http://localhost:8000/api>
 
 ## les tests
 lancer tout les tests développé si dessous :
@@ -82,5 +82,12 @@ composer db
 
 configuration de npm
 ``` bash
+npm install
+```
+### Lancer le serveur web
+Lancez le serveur Web local avec cette commande :
+```bash
 npm run dev
 ```
+### Accès au serveur Web
+Naviguez alors à partir de cette adresse : <http://localhost:5173>
