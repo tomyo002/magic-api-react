@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="app">
       <header className="app__header header">
-        <h1 className="header__title">List Magic</h1>
+        <h1 className="header__title">Magic</h1>
       </header>
       <main className="app__main">
         <Index />
