@@ -1,5 +1,6 @@
 import React from "react";
 import CardsList from "./components/CardsList.jsx";
+import Index from "./routes/Index.jsx";
 
 function App() {
   return (
@@ -8,7 +9,7 @@ function App() {
         <h1 className="header__title">List Magic</h1>
       </header>
       <main className="app__main">
-        <CardsList />
+        <Index />
       </main>
       <footer className="app__footer footer">footer</footer>
     </div>
