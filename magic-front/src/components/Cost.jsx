@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { fetchCost, fetchElement } from "../services/api/Costs";
 
+const BASE_URL = "http://localhost:8000";
 function Cost({ cost = "" }) {
   const [costData, setCostData] = useState([]);
   const [elementData, setElementData] = useState([]);
@@ -16,7 +17,7 @@ function Cost({ cost = "" }) {
       {costData.number}{" "}
       <img
         className="icon"
-        src={`http://localhost:8000${costData.element}/icon`}
+        src={`${BASE_URL}${costData.element}/icon`}
         alt={elementData.name}
       />
     </div>

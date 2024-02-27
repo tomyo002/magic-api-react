@@ -5,6 +5,7 @@ import CostCard from "./CostCard";
 import Keywords from "./Keywords";
 import Capacities from "./Capacities";
 
+const BASE_URL = "http://localhost:8000/api/cards/";
 // eslint-disable-next-line react/prop-types
 function CardsDetails({ id = "" }) {
   const [cardData, setCardData] = useState([]);
@@ -32,7 +33,7 @@ function CardsDetails({ id = "" }) {
           <a href={cardData.pictureUrl}>
             <img
               className="picture__size"
-              src={`http://localhost:8000/api/cards/${id}/picture`}
+              src={`${BASE_URL}${id}/picture`}
             />
           </a>
         </div>
