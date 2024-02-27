@@ -18,10 +18,9 @@ class KeywordCardFixtures extends Fixture implements DependentFixtureInterface
             true
         );
         foreach ($tab as $t) {
-            KeywordCardFactory::createOne([
-                'card' => CardFactory::find(['id' => $t['card']]),
-                'keyword' => KeywordFactory::find(['id' => $t['keyword']]),
-            ]);
+            $t['card'] = CardFactory::find(['id' => $t['card']]);
+            $t['keyword'] = KeywordFactory::find(['id' => $t['keyword']]);
+            KeywordCardFactory::createOne($t);
         }
     }
 

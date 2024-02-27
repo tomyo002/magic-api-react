@@ -7,7 +7,6 @@ use App\Factory\IconEltFactory;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 use Doctrine\Persistence\ObjectManager;
-use phpDocumentor\Reflection\Element;
 
 class IconEltFixtures extends Fixture implements DependentFixtureInterface
 {
@@ -18,12 +17,9 @@ class IconEltFixtures extends Fixture implements DependentFixtureInterface
             true
         );
         foreach ($tab as $t) {
-            IconEltFactory::createOne(
-                [
-                    'element' => ElementFactory::find(['id' => $t['element']]),
-                    'icon' => file_get_contents(__DIR__.'/../../public/images/'.$t['icon']),
-                ]
-            );
+            $t['element'] = ElementFactory::find(['id' => $t['element']]);
+            $t['icon'] = file_get_contents(__DIR__.'/../../public/images/'.$t['icon']);
+            IconEltFactory::createOne($t);
         }
     }
 

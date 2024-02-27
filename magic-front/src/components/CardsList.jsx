@@ -13,7 +13,7 @@ function CardsList() {
       <article className="card__header header__title article__card">
         {card.name}{" "}
         <div>
-          <CostCard costs={card.costs} key={cardData.id} />
+          <CostCard costs={card.costs} key={card.id} />
         </div>
       </article>
       <a href={`/card/${card.id}`}>

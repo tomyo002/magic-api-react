@@ -18,11 +18,9 @@ class CostFixtures extends Fixture implements DependentFixtureInterface
             true
         );
         foreach ($tab as $t) {
-            CostFactory::createOne([
-                'number' => $t['number'],
-                'card' => CardFactory::find(['id' => $t['card']]),
-                'element' => ElementFactory::find(['id' => $t['element']]),
-            ]);
+            $t['card'] = CardFactory::find(['id' => $t['card']]);
+            $t['element'] = ElementFactory::find(['id' => $t['element']]);
+            CostFactory::createOne($t);
         }
     }
 

@@ -17,10 +17,8 @@ class CapacityFixtures extends Fixture implements DependentFixtureInterface
             true
         );
         foreach ($tab as $t) {
-            CapacityFactory::createOne([
-                'description' => $t['description'],
-                'card' => CardFactory::find(['id' => $t['card']]),
-            ]);
+            $t['card'] = CardFactory::find(['id' => $t['card']]);
+            CapacityFactory::createOne($t);
         }
     }
 

@@ -17,12 +17,9 @@ class PictureFixtures extends Fixture implements DependentFixtureInterface
             true
         );
         foreach ($tab as $t) {
-            PictureFactory::createOne(
-                [
-                    'card' => CardFactory::find(['id' => $t['card']]),
-                    'picture' => file_get_contents(__DIR__.'/../../public/images/card/'.$t['picture']),
-                ]
-            );
+            $t['card'] = CardFactory::find(['id' => $t['card']]);
+            $t['picture'] = file_get_contents(__DIR__.'/../../public/images/card/'.$t['picture']);
+            PictureFactory::createOne($t);
         }
     }
 

@@ -18,44 +18,9 @@ class CardFixtures extends Fixture implements DependentFixtureInterface
             true
         );
         foreach ($tab as $t) {
-            if (isset($t['healthPoint'])) {
-                CardFactory::createOne(
-                    [
-                        'name' => $t['name'],
-                        'subtype' => $t['subtype'],
-                        'healthPoint' => $t['healthPoint'],
-                        'attackPoint' => $t['attackPoint'],
-                        'type' => TypeFactory::find(['id' => $t['type']]),
-                        'extension' => ExtensionFactory::find(['id' => $t['extension']]),
-                        'rarity' => $t['rarity'],
-                        'url' => $t['url'],
-                        'pictureUrl' => $t['pictureUrl'],
-                        ]
-                );
-            } elseif (isset($t['loyalty'])) {
-                CardFactory::createOne(
-                    [
-                        'name' => $t['name'],
-                        'subtype' => $t['subtype'],
-                        'loyalty' => $t['loyalty'],
-                        'type' => TypeFactory::find(['id' => $t['type']]),
-                        'extension' => ExtensionFactory::find(['id' => $t['extension']]),
-                        'rarity' => $t['rarity'],
-                        'url' => $t['url'],
-                        'pictureUrl' => $t['pictureUrl'],
-                    ]
-                );
-            } else {
-                CardFactory::createOne(
-                    [
-                        'name' => $t['name'],
-                        'type' => TypeFactory::find(['id' => $t['type']]),
-                        'extension' => ExtensionFactory::find(['id' => $t['extension']]),
-                        'rarity' => $t['rarity'],
-                        'url' => $t['url'],
-                        'pictureUrl' => $t['pictureUrl'],
-                    ]);
-            }
+            $t['type'] = TypeFactory::find(['id' => $t['type']]);
+            $t['extension'] = ExtensionFactory::find(['id' => $t['extension']]);
+            CardFactory::createOne($t);
         }
     }
 
