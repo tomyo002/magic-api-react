@@ -1,6 +1,5 @@
 import React from "react";
-import CardsList from "./components/CardsList.jsx";
-import Index from "./routes/Index.jsx";
+import Index from "./routes/Index";
 
 function App() {
   return (

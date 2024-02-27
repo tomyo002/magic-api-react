@@ -1,22 +1,25 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import {fetchCapacity} from "../services/api/Capacities.js";
+import { fetchCapacity } from "../services/api/Capacities";
 
-function Capacities({ capacities })
-{
-    console.log(capacities);
-    return capacities.map((ca) => {
-        const [capData, setCapData] = useState([])
-        useEffect(() => {
-            fetchCapacity(ca).then((answer) => setCapData(answer))
-        });
-        return (
-            <div>{capData.description}</div>
-        );
-    });
+function Capacities({ capacities }) {
+  const [capData, setCapData] = useState([]);
+  useEffect(() => {
+    Promise.all(capacities.map(fetchCapacity)).then(setCapData);
+  }, []);
+
+  return (
+    <>
+      {capData.map((cap) => (
+        <div key={cap}>{cap.description}</div>
+      ))}
+    </>
+  );
+
 }
 export default Capacities;
 
 Capacities.propTypes = {
-    capacities:PropTypes.node,
-}
+  // eslint-disable-next-line react/require-default-props
+  capacities: PropTypes.node,
+};

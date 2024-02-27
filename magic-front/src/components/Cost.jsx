@@ -1,19 +1,24 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import {fetchCost, fetchElement} from "../services/api/Costs";
+import { fetchCost, fetchElement } from "../services/api/Costs";
 
 function Cost({ cost = "" }) {
   const [costData, setCostData] = useState([]);
   const [elementData, setElementData] = useState([]);
   useEffect(() => {
-    fetchCost(cost).then((answer) => {setCostData(answer);
-      fetchElement(answer.element).then((answer) =>
-          setElementData(answer)
-      );});
+    fetchCost(cost).then((answer) => {
+      setCostData(answer);
+      fetchElement(answer.element).then((answer) => setElementData(answer));
+    });
   }, []);
   return (
     <div>
-      {costData.number} <img className="icon" src={`http://localhost:8000${costData.element}/icon`}  alt={elementData.name}/>
+      {costData.number}{" "}
+      <img
+        className="icon"
+        src={`http://localhost:8000${costData.element}/icon`}
+        alt={elementData.name}
+      />
     </div>
   );
 }

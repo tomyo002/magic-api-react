@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import { fetchCard, fetchExtension, fetchType } from "../services/api/cards.js";
-import CostCard from "./CostCard.jsx";
-import Keywords from "./Keywords.jsx";
-import Capacities from "./Capacities.jsx";
+import { fetchCard, fetchExtension, fetchType } from "../services/api/cards";
+import CostCard from "./CostCard";
+import Keywords from "./Keywords";
+import Capacities from "./Capacities";
 
+// eslint-disable-next-line react/prop-types
 function CardsDetails({ id = "" }) {
   const [cardData, setCardData] = useState([]);
   const [costs, setCosts] = useState([]);
@@ -13,7 +14,6 @@ function CardsDetails({ id = "" }) {
   useEffect(() => {
     fetchCard(id).then((answer) => {
       setCardData(answer);
-      console.log(answer);
       setCosts(answer.costs);
       fetchType(answer.type).then((answer) => setTypeData(answer));
       fetchExtension(answer.extension).then((answer) => setExtData(answer));
@@ -40,7 +40,7 @@ function CardsDetails({ id = "" }) {
       <div className="card">
         {" "}
         <div className="card__header header__title">Coût du sort</div>
-        <CostCard costs={costs} />
+        <CostCard costs={costs} key={cardData.id} />
       </div>
       <div className="card">
         <div className="card__header header__title">{typeData.name}</div>{" "}
@@ -73,7 +73,7 @@ function CardsDetails({ id = "" }) {
       ) : (
         <div className="card">
           <div className="card__header header__title"> Mot de clé</div>
-          <Keywords keywords={cardData.keywordCards} />{" "}
+          <Keywords keywords={cardData.keywordCards} key={cardData.id} />{" "}
         </div>
       )}
       {!cardData.capacities ? (
@@ -95,6 +95,6 @@ function CardsDetails({ id = "" }) {
   return detail;
 }
 export default CardsDetails;
-CardsDetails.propsType = {
+CardsDetails.propType = {
   id: PropTypes.string,
 };
