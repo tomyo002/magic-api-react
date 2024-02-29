@@ -7,10 +7,12 @@ function ExtensionList() {
     fetchAllExtension().then((answer) => setExtData(answer["hydra:member"]));
   }, []);
   const lstExt = extData.map((ext) => (
-    <div className="card">
-      <div>nom : {ext.name}</div>
-      <div>année de sortie : {ext.releaseYear}</div>
-    </div>
+    <a href={`/extension/${ext.id}`} className="text_lien">
+      <div className="card">
+        <div>nom : {ext.name}</div>
+        <div>année de sortie : {ext.releaseYear}</div>
+      </div>
+    </a>
   ));
   return (
     // eslint-disable-next-line react/jsx-no-useless-fragment
