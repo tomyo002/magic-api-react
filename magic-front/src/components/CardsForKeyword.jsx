@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import {
-  fetchKeywordwithId,
-} from "../services/api/Keywords";
+import { fetchKeywordwithId } from "../services/api/Keywords";
 import CardForKeywordCards from "./CardForKeywordCards";
 
 function CardsForKeyword({ id = 1 }) {
@@ -12,7 +10,7 @@ function CardsForKeyword({ id = 1 }) {
       setKeyData(answer);
     });
   }, []);
-  const lstCard = (
+  return (
     <>
       <div className="header__title key__title">{keyData.name}</div>
       {!keyData.keywordCards ? (
@@ -24,7 +22,6 @@ function CardsForKeyword({ id = 1 }) {
       )}
     </>
   );
-  return lstCard;
 }
 
 export default CardsForKeyword;

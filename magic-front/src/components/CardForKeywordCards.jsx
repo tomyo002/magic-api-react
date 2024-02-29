@@ -10,7 +10,7 @@ function CardForKeywordCards({ url = "" }) {
       fetchCard(answer.card).then((answer) => setCardData(answer));
     });
   }, []);
-  const card = !cardData.id ? (
+  return !cardData.id ? (
     ""
   ) : (
     <div className="card" key={cardData.id}>
@@ -27,7 +27,6 @@ function CardForKeywordCards({ url = "" }) {
       </a>
     </div>
   );
-  return card;
 }
 export default CardForKeywordCards;
 
