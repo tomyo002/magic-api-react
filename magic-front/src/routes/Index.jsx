@@ -6,6 +6,7 @@ import CardsDetails from "../components/CardsDetails";
 import Navbar from "../components/Navbar";
 import KeywordList from "../components/KeywordList";
 import ExtensionList from "../components/ExtensionList";
+import CardsForKeyword from "../components/CardsForKeyword.jsx";
 
 function Index() {
   return (
@@ -19,6 +20,9 @@ function Index() {
       </Route>
       <Route path="/keyword">
         <KeywordList />
+      </Route>
+      <Route path="/keyword/:id">
+        {(params) => <CardsForKeyword id={params.id} />}
       </Route>
       <Route path="/extension">
         <ExtensionList />
