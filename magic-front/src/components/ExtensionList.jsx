@@ -15,11 +15,6 @@ function ExtensionList() {
   return (
     <>
       {lstExt}
-      <a href="/">
-        <button type="button" className="btn">
-          retour
-        </button>
-      </a>
     </>
   );
 }

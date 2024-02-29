@@ -85,12 +85,6 @@ function CardsDetails({ id = "" }) {
           <Capacities capacities={cardData.capacities} />{" "}
         </div>
       )}
-
-      <a href="/">
-        <button type="button" className="btn">
-          retour
-        </button>
-      </a>
     </>
   );
   return detail;

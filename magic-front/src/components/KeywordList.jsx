@@ -9,19 +9,14 @@ function KeywordList() {
 
   const lstKey = keyData.map((key) => (
     // eslint-disable-next-line react/jsx-filename-extension
-    <div className="card">
-      <div>{key.name}</div>
-      <div>description : {key.description}</div>
-    </div>
+    <a href={`/keyword/${key.id}`} className="text_lien"><div className="card">
+      <div className="card__header text_lien">{key.name}</div>
+      <div className="card__main text_lien">description : {key.description}</div>
+    </div></a>
   ));
   return (
     <>
       {lstKey}
-      <a href="/">
-        <button type="button" className="btn">
-          retour
-        </button>
-      </a>
     </>
   );
 }
