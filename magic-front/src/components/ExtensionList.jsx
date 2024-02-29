@@ -13,9 +13,8 @@ function ExtensionList() {
     </div>
   ));
   return (
-    <>
-      {lstExt}
-    </>
+    // eslint-disable-next-line react/jsx-no-useless-fragment
+    <>{lstExt}</>
   );
 }
 export default ExtensionList;
