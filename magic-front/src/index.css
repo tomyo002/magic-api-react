@@ -164,3 +164,16 @@ html, body, #root {
 .picture__size{
   width: 100px;
 }
+.text_lien{
+  text-decoration: none;
+}
+.key__title{
+  text-align: center;
+}
+.navbar{
+  display: flex;
+  flex: 1;
+}
+.navbar>a{
+  flex: 1;
+}
