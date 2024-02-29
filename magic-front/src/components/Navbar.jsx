@@ -13,6 +13,11 @@ function Navbar() {
           Extension
         </button>
       </a>
+      <a href="/element">
+        <button type="button" className="btn">
+          Element
+        </button>
+      </a>
       <a href="/">
         <button type="button" className="btn">
           page d'accueil
