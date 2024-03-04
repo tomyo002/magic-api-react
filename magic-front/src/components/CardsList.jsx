@@ -6,7 +6,7 @@ function CardsList() {
   const [cardsData, setCardsData] = useState([]);
 
   useEffect(() => {
-    fetchAllCards().then((answer) => setCardsData(answer["hydra:member"]));
+    fetchAllCards().then((cards) => setCardsData(cards["hydra:member"]));
   }, []);
   const lstCards = cardsData.map((card) => (
     <div className="card" key={card.id}>

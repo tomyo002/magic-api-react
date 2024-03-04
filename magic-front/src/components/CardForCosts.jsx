@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import { fetchCardUrl, fetchCostUrl } from "../services/api/Element";
-import CostCard from "./CostCard.jsx";
+
+import CostCard from "./CostCard";
+import { fetchCostUrl } from "../services/api/Costs";
+import { fetchCardUrl } from "../services/api/cards";
 
 function CardForCosts({ url = "" }) {
   const [cardData, setCardData] = useState([]);
   useEffect(() => {
-    fetchCostUrl(url).then((answer) =>
-      fetchCardUrl(answer.card).then((answer) => setCardData(answer)),
+    fetchCostUrl(url).then((cost) =>
+      fetchCardUrl(cost.card).then(setCardData),
     );
   }, []);
 

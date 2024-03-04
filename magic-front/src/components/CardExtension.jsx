@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import { fetchCard } from "../services/api/Extension";
 import CostCard from "./CostCard";
+import { fetchCardUrl } from "../services/api/cards";
 
 function CardExtension({ url = "" }) {
   const [cardData, setCardData] = useState([]);
   useEffect(() => {
-    fetchCard(url).then((answer) => setCardData(answer));
+    fetchCardUrl(url).then(setCardData);
   }, []);
 
   return cardData.id ? (

@@ -6,7 +6,7 @@ export const BASE_URL = "http://localhost:8000/api/elements";
 function ElementList() {
   const [eltData, setEltData] = useState([]);
   useEffect(() => {
-    fetchAllElement().then((answer) => setEltData(answer["hydra:member"]));
+    fetchAllElement().then((elements) => setEltData(elements["hydra:member"]));
   }, []);
 
   return eltData.map((elt) => (

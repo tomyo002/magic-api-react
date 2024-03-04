@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import { fetchCost, fetchElement } from "../services/api/Costs";
-import { URL_ELEMENT } from "../services/url/BaseUrl.js";
+import { URL_ELEMENT } from "../services/url/BaseUrl";
+import { fetchCostUrl } from "../services/api/Costs";
+import { fetchElementUrl } from "../services/api/Element";
 
 function Cost({ cost = "" }) {
   const [costData, setCostData] = useState([]);
   const [elementData, setElementData] = useState([]);
   useEffect(() => {
-    fetchCost(cost).then((answer) => {
+    fetchCostUrl(cost).then((answer) => {
       setCostData(answer);
-      fetchElement(answer.element).then((answer) => setElementData(answer));
+      fetchElementUrl(answer.element).then(setElementData);
     });
   }, []);
 

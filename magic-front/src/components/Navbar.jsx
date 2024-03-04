@@ -1,7 +1,7 @@
 import React from "react";
 
 function Navbar() {
-  return(
+  return (
     <span className="navbar">
       <a href="/keyword">
         <button type="button" className="btn">

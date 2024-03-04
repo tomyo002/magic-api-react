@@ -4,7 +4,9 @@ import { fetchAllExtension } from "../services/api/Extension";
 function ExtensionList() {
   const [extData, setExtData] = useState([]);
   useEffect(() => {
-    fetchAllExtension().then((answer) => setExtData(answer["hydra:member"]));
+    fetchAllExtension().then((extensions) =>
+      setExtData(extensions["hydra:member"]),
+    );
   }, []);
   const lstExt = extData.map((ext) => (
     <a href={`/extension/${ext.id}`} className="text_lien">

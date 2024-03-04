@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import { fetchCapacity } from "../services/api/Capacities";
+import { fetchCapacityUrl } from "../services/api/Capacities";
 
 function Capacities({ capacities }) {
   const [capData, setCapData] = useState([]);
   useEffect(() => {
-    Promise.all(capacities.map(fetchCapacity)).then(setCapData);
+    Promise.all(capacities.map(fetchCapacityUrl)).then(setCapData);
   }, []);
 
   return (

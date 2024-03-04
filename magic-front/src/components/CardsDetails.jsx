@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import { fetchCard, fetchExtension, fetchType } from "../services/api/cards";
 import CostCard from "./CostCard";
 import Keywords from "./Keywords";
 import Capacities from "./Capacities";
-import { URL_CARD } from "../services/url/BaseUrl.js";
+import { URL_CARD } from "../services/url/BaseUrl";
+import { fetchCardId } from "../services/api/cards";
+import { fetchTypeUrl } from "../services/api/Type";
+import { fetchExtensionUrl } from "../services/api/Extension";
 
 // eslint-disable-next-line react/prop-types
 function CardsDetails({ id = "" }) {
@@ -13,11 +15,11 @@ function CardsDetails({ id = "" }) {
   const [typeData, setTypeData] = useState([]);
   const [extData, setExtData] = useState([]);
   useEffect(() => {
-    fetchCard(id).then((answer) => {
-      setCardData(answer);
-      setCosts(answer.costs);
-      fetchType(answer.type).then((answer) => setTypeData(answer));
-      fetchExtension(answer.extension).then((answer) => setExtData(answer));
+    fetchCardId(id).then((card) => {
+      setCardData(card);
+      setCosts(card.costs);
+      fetchTypeUrl(card.type).then(setTypeData);
+      fetchExtensionUrl(card.extension).then(setExtData);
     });
   }, []);
 
@@ -27,7 +29,7 @@ function CardsDetails({ id = "" }) {
         <div className="picture__header">
           <div className="card__header header__title">{cardData.name}</div>
           <div>
-            <a href={cardData.url}>site officiel</a>
+            <a href={cardData.url}>Site officiel</a>
           </div>
         </div>
         <div className="picture__detail">

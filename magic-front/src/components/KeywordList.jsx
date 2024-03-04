@@ -4,7 +4,7 @@ import { fetchAllKeyword } from "../services/api/Keywords";
 function KeywordList() {
   const [keyData, setKeyData] = useState([]);
   useEffect(() => {
-    fetchAllKeyword().then((answer) => setKeyData(answer["hydra:member"]));
+    fetchAllKeyword().then((keywords) => setKeyData(keywords["hydra:member"]));
   }, []);
 
   const lstKey = keyData.map((key) => (

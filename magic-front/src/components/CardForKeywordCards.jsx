@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import { fetchCard, fetchKeywordCard } from "../services/api/Keywords";
+import { fetchKeywordCardUrl } from "../services/api/Keywords";
 import CostCard from "./CostCard";
+import { fetchCardUrl } from "../services/api/cards";
 
 function CardForKeywordCards({ url = "" }) {
   const [cardData, setCardData] = useState([]);
   useEffect(() => {
-    fetchKeywordCard(url).then((answer) => {
-      fetchCard(answer.card).then((answer) => setCardData(answer));
+    fetchKeywordCardUrl(url).then((keyCard) => {
+      fetchCardUrl(keyCard.card).then(setCardData);
     });
   }, []);
 

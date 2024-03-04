@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import { fetchKeyword, fetchKeywordCard } from "../services/api/Keywords";
+import { fetchKeywordCardUrl, fetchKeywordUrl } from "../services/api/Keywords";
 
 function Keyword({ keyword }) {
   const [keyData, setKeyData] = useState([]);
   useEffect(() => {
-    fetchKeywordCard(keyword).then((answer) =>
-      fetchKeyword(answer.keyword).then((answer) => setKeyData(answer)),
+    fetchKeywordCardUrl(keyword).then((answer) =>
+      fetchKeywordUrl(answer.keyword).then(setKeyData),
     );
   }, []);
 

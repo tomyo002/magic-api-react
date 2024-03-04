@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import { fetchElement } from "../services/api/Element";
 import CardForCosts from "./CardForCosts";
+import { fetchElementId } from "../services/api/Element";
 
 function CardForElement({ id = 1 }) {
   const [eltData, setEltData] = useState([]);
   useEffect(() => {
-    fetchElement(id).then((answer) => setEltData(answer));
+    fetchElementId(id).then(setEltData);
   }, []);
 
   return (

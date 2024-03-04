@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import { fetchExtension } from "../services/api/Extension";
 import CardExtension from "./CardExtension";
+import { fetchExtensionId } from "../services/api/Extension";
 
 function CardForExtension({ id = 1 }) {
   const [extData, setExtData] = useState([]);
   useEffect(() => {
-    fetchExtension(id).then((answer) => setExtData(answer));
+    fetchExtensionId(id).then(setExtData);
   }, []);
 
   return (
