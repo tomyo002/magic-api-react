@@ -8,7 +8,6 @@ import { fetchCardId } from "../services/api/cards";
 import { fetchTypeUrl } from "../services/api/Type";
 import { fetchExtensionUrl } from "../services/api/Extension";
 
-// eslint-disable-next-line react/prop-types
 function CardsDetails({ id = "" }) {
   const [cardData, setCardData] = useState([]);
   const [costs, setCosts] = useState([]);

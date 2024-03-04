@@ -1,6 +1,5 @@
 import React from "react";
-// eslint-disable-next-line import/no-unresolved
-import { Route, useParams } from "wouter";
+import { Route } from "wouter";
 import CardsList from "../components/CardsList";
 import CardsDetails from "../components/CardsDetails";
 import Navbar from "../components/Navbar";
@@ -15,27 +14,19 @@ function Index() {
   return (
     <switch>
       <Navbar />
-      <Route path="/">
-        <CardsList />
-      </Route>
+      <Route path="/" component={CardsList} />
       <Route path="/card/:id">
         {(params) => <CardsDetails id={params.id} />}
       </Route>
-      <Route path="/keyword">
-        <KeywordList />
-      </Route>
+      <Route path="/keyword" component={KeywordList} />
       <Route path="/keyword/:id">
         {(params) => <CardsForKeyword id={params.id} />}
       </Route>
-      <Route path="/extension">
-        <ExtensionList />
-      </Route>
+      <Route path="/extension" component={ExtensionList} />
       <Route path="/extension/:id">
         {(params) => <CardForExtension id={params.id} />}
       </Route>
-      <Route path="/element">
-        <ElementList />
-      </Route>
+      <Route path="/element" component={ElementList} />
       <Route path="/element/:id">
         {(params) => <CardForElement id={params.id} />}
       </Route>

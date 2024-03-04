@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { fetchAllElement } from "../services/api/Element";
-
-export const BASE_URL = "http://localhost:8000/api/elements";
+import { URL_ELEMENT } from "../services/url/BaseUrl";
 
 function ElementList() {
   const [eltData, setEltData] = useState([]);
@@ -15,7 +14,7 @@ function ElementList() {
         <div className="card__header">{elt.name}</div>
         <img
           className="icon"
-          src={`${BASE_URL}/${elt.id}/icon`}
+          src={`${URL_ELEMENT.iconUrl(elt.url)}/icon`}
           alt={elt.name}
         />
       </div>

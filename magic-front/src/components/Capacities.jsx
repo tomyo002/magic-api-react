@@ -19,6 +19,5 @@ function Capacities({ capacities }) {
 export default Capacities;
 
 Capacities.propTypes = {
-  // eslint-disable-next-line react/require-default-props
   capacities: PropTypes.node,
 };

@@ -8,7 +8,6 @@ function KeywordList() {
   }, []);
 
   const lstKey = keyData.map((key) => (
-    // eslint-disable-next-line react/jsx-filename-extension
     <a href={`/keyword/${key.id}`} className="text_lien" key={key.id}>
       <div className="card">
         <div className="card__header text_lien">{key.name}</div>
@@ -19,9 +18,6 @@ function KeywordList() {
     </a>
   ));
 
-  return (
-    // eslint-disable-next-line react/jsx-no-useless-fragment
-    <>{lstKey}</>
-  );
+  return <>{lstKey}</>;
 }
 export default KeywordList;

@@ -8,9 +8,7 @@ import { fetchCardUrl } from "../services/api/cards";
 function CardForCosts({ url = "" }) {
   const [cardData, setCardData] = useState([]);
   useEffect(() => {
-    fetchCostUrl(url).then((cost) =>
-      fetchCardUrl(cost.card).then(setCardData),
-    );
+    fetchCostUrl(url).then((cost) => fetchCardUrl(cost.card).then(setCardData));
   }, []);
 
   return cardData.id ? (
