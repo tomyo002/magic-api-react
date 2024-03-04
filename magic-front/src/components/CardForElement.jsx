@@ -8,14 +8,13 @@ function CardForElement({ id = 1 }) {
   useEffect(() => {
     fetchElement(id).then((answer) => setEltData(answer));
   }, []);
+
   return (
     <>
       <div className="header__title key__title">{eltData.name}</div>
-      {!eltData.costs ? (
-        <></>
-      ) : (
+      {!!eltData.costs ?  (
         eltData.costs.map((costs) => <CardForCosts url={costs} />)
-      )}
+      ):null}
     </>
   );
 }

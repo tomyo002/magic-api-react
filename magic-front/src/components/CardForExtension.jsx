@@ -8,14 +8,13 @@ function CardForExtension({ id = 1 }) {
   useEffect(() => {
     fetchExtension(id).then((answer) => setExtData(answer));
   }, []);
+
   return (
     <>
       <div className="header__title key__title">{extData.name}</div>
-      {!extData.cards ? (
-        <></>
-      ) : (
+      {!!extData.cards ?  (
         extData.cards.map((card) => <CardExtension url={card} />)
-      )}
+      ) : null}
     </>
   );
 }

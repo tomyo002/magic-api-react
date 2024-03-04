@@ -10,9 +10,8 @@ function CardForCosts({ url = "" }) {
       fetchCardUrl(answer.card).then((answer) => setCardData(answer)),
     );
   }, []);
-  return !cardData.id ? (
-    ""
-  ) : (
+
+  return !!cardData.id ? (
     <div className="card" key={cardData.id}>
       <article className="card__header header__title article__card">
         {cardData.name}{" "}
@@ -26,7 +25,7 @@ function CardForCosts({ url = "" }) {
         </button>
       </a>
     </div>
-  );
+  ): null;
 }
 export default CardForCosts;
 CardForCosts.propTypes = {

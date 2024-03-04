@@ -8,9 +8,8 @@ function CardExtension({ url = "" }) {
   useEffect(() => {
     fetchCard(url).then((answer) => setCardData(answer));
   }, []);
-  return !cardData.id ? (
-    ""
-  ) : (
+
+  return !!cardData.id  ? (
     <div className="card" key={cardData.id}>
       <article className="card__header header__title article__card">
         {cardData.name}{" "}
@@ -24,7 +23,7 @@ function CardExtension({ url = "" }) {
         </button>
       </a>
     </div>
-  );
+  ): null;
 }
 export default CardExtension;
 CardExtension.propTypes = {
