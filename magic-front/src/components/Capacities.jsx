@@ -15,7 +15,6 @@ function Capacities({ capacities }) {
       ))}
     </>
   );
-
 }
 export default Capacities;
 

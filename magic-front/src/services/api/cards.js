@@ -1,4 +1,4 @@
-import {BASE_URL, URL_CARD, URL_EXTENSION, URL_TYPE} from "../url/BaseUrl.js";
+import { BASE_URL, URL_CARD, URL_EXTENSION, URL_TYPE } from "../url/BaseUrl.js";
 
 export async function fetchAllCards() {
   const reponse = await fetch(`${URL_CARD.list}`);

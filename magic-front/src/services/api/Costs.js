@@ -1,5 +1,4 @@
-import {URL_COST, URL_ELEMENT} from "../url/BaseUrl.js";
-
+import { URL_COST, URL_ELEMENT } from "../url/BaseUrl.js";
 
 export async function fetchCost(url) {
   const reponse = await fetch(`${URL_COST.itemUrl(url)}`);

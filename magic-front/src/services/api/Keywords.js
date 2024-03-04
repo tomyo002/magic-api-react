@@ -1,5 +1,4 @@
-import {URL_CARD, URL_KEYWORD} from "../url/BaseUrl.js";
-
+import { URL_CARD, URL_KEYWORD } from "../url/BaseUrl.js";
 
 export async function fetchAllKeyword() {
   const reponse = await fetch(`${URL_KEYWORD.list}`);

@@ -14,11 +14,10 @@ function CardsForKeyword({ id = 1 }) {
   return (
     <>
       <div className="header__title key__title">{keyData.name}</div>
-      {!!keyData.keywordCards ? (
-        keyData.keywordCards.map((keyCard) => (
-          <CardForKeywordCards url={keyCard} />
-        ))
-      ) : null}
+      {keyData.keywordCards ?  keyData.keywordCards.map((keyCard) => (
+            <CardForKeywordCards url={keyCard} />
+          ))
+        : null}
     </>
   );
 }

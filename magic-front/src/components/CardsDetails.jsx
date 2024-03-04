@@ -1,11 +1,10 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import {fetchCard, fetchExtension, fetchType} from "../services/api/cards";
+import { fetchCard, fetchExtension, fetchType } from "../services/api/cards";
 import CostCard from "./CostCard";
 import Keywords from "./Keywords";
 import Capacities from "./Capacities";
-import {URL_CARD} from "../services/url/BaseUrl.js";
-
+import { URL_CARD } from "../services/url/BaseUrl.js";
 
 // eslint-disable-next-line react/prop-types
 function CardsDetails({ id = "" }) {
@@ -22,73 +21,72 @@ function CardsDetails({ id = "" }) {
     });
   }, []);
 
-    return (
-      <>
-          <div className="card picture">
-              <div className="picture__header">
-                  <div className="card__header header__title">{cardData.name}</div>
-                  <div>
-                      <a href={cardData.url}>site officiel</a>
-                  </div>
-              </div>
-              <div className="picture__detail">
-                  <a href={cardData.pictureUrl}>
-                      <img
-                          className="picture__size"
-                          src={`${URL_CARD.iconId(cardData.id)}`}
-                      />
-                  </a>
-              </div>
+  return (
+    <>
+      <div className="card picture">
+        <div className="picture__header">
+          <div className="card__header header__title">{cardData.name}</div>
+          <div>
+            <a href={cardData.url}>site officiel</a>
           </div>
-          <div className="card">
-              {" "}
-              <div className="card__header header__title">Coût du sort</div>
-              <CostCard costs={costs} key={cardData.id}/>
-          </div>
-          <div className="card">
-              <div className="card__header header__title">{typeData.name}</div>
-              {" "}
-              {typeData.description}
-          </div>
-          <div className="card">
-              {" "}
-              <div className="card__header header__title">Description</div>
-              {!cardData.subtype ? "" : <div>Sous-type : {cardData.subtype}</div>}
-              {!cardData.attackPoint ? (
-                  ""
-              ) : (
-                  <div> Point d'attaque : {cardData.attackPoint}</div>
-              )}
-              {!cardData.healthPoint ? (
-                  ""
-              ) : (
-                  <div>Point de vie : {cardData.healthPoint}</div>
-              )}
-              {!cardData.loyalty ? "" : <div>Loyauté : {cardData.loyalty}</div>}
-              <div>Rareté : {cardData.rarity}</div>
-          </div>
-          <div className="card">
-              <div className="card__header header__title">Extension</div>
-              <div>nom : {extData.name}</div>
-              <div>année de sortie : {extData.releaseYear}</div>
-          </div>
-          {!cardData.keywordCards ? (
-              ""
-          ) : (
-              <div className="card">
-                  <div className="card__header header__title"> Mot de clé</div>
-                  <Keywords keywords={cardData.keywordCards} key={cardData.id}/>{" "}
-              </div>
-          )}
-          {!cardData.capacities ? (
-              ""
-          ) : (
-              <div className="card">
-                  <div className="card__header header__title"> Capacité</div>
-                  <Capacities capacities={cardData.capacities}/>{" "}
-              </div>
-          )}
-      </>
+        </div>
+        <div className="picture__detail">
+          <a href={cardData.pictureUrl}>
+            <img
+              className="picture__size"
+              src={`${URL_CARD.iconId(cardData.id)}`}
+            />
+          </a>
+        </div>
+      </div>
+      <div className="card">
+        {" "}
+        <div className="card__header header__title">Coût du sort</div>
+        <CostCard costs={costs} key={cardData.id} />
+      </div>
+      <div className="card">
+        <div className="card__header header__title">{typeData.name}</div>{" "}
+        {typeData.description}
+      </div>
+      <div className="card">
+        {" "}
+        <div className="card__header header__title">Description</div>
+        {!cardData.subtype ? "" : <div>Sous-type : {cardData.subtype}</div>}
+        {!cardData.attackPoint ? (
+          ""
+        ) : (
+          <div> Point d'attaque : {cardData.attackPoint}</div>
+        )}
+        {!cardData.healthPoint ? (
+          ""
+        ) : (
+          <div>Point de vie : {cardData.healthPoint}</div>
+        )}
+        {!cardData.loyalty ? "" : <div>Loyauté : {cardData.loyalty}</div>}
+        <div>Rareté : {cardData.rarity}</div>
+      </div>
+      <div className="card">
+        <div className="card__header header__title">Extension</div>
+        <div>nom : {extData.name}</div>
+        <div>année de sortie : {extData.releaseYear}</div>
+      </div>
+      {!cardData.keywordCards ? (
+        ""
+      ) : (
+        <div className="card">
+          <div className="card__header header__title"> Mot de clé</div>
+          <Keywords keywords={cardData.keywordCards} key={cardData.id} />{" "}
+        </div>
+      )}
+      {!cardData.capacities ? (
+        ""
+      ) : (
+        <div className="card">
+          <div className="card__header header__title"> Capacité</div>
+          <Capacities capacities={cardData.capacities} />{" "}
+        </div>
+      )}
+    </>
   );
 }
 export default CardsDetails;

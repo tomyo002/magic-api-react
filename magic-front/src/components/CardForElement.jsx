@@ -12,9 +12,9 @@ function CardForElement({ id = 1 }) {
   return (
     <>
       <div className="header__title key__title">{eltData.name}</div>
-      {!!eltData.costs ?  (
-        eltData.costs.map((costs) => <CardForCosts url={costs} />)
-      ):null}
+      {eltData.costs
+        ? eltData.costs.map((costs) => <CardForCosts url={costs} />)
+        : null}
     </>
   );
 }

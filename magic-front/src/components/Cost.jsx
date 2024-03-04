@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { fetchCost, fetchElement } from "../services/api/Costs";
-import {URL_ELEMENT} from "../services/url/BaseUrl.js";
-
+import { URL_ELEMENT } from "../services/url/BaseUrl.js";
 
 function Cost({ cost = "" }) {
   const [costData, setCostData] = useState([]);

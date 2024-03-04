@@ -1,5 +1,4 @@
-import {URL_CARD, URL_COST, URL_ELEMENT} from "../url/BaseUrl.js";
-
+import { URL_CARD, URL_COST, URL_ELEMENT } from "../url/BaseUrl.js";
 
 export async function fetchAllElement() {
   const reponse = await fetch(`${URL_ELEMENT.list}`);

@@ -12,9 +12,9 @@ function CardForExtension({ id = 1 }) {
   return (
     <>
       <div className="header__title key__title">{extData.name}</div>
-      {!!extData.cards ?  (
-        extData.cards.map((card) => <CardExtension url={card} />)
-      ) : null}
+      {extData.cards
+        ? extData.cards.map((card) => <CardExtension url={card} />)
+        : null}
     </>
   );
 }
