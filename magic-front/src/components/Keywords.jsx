@@ -6,7 +6,7 @@ function Keywords({ keywords }) {
   return (
     <>
       {keywords.map((k) => (
-        <Keyword keyword={k} />
+        <Keyword keyword={k} key={k} />
       ))}
     </>
   );

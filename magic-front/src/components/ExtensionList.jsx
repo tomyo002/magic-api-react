@@ -9,7 +9,7 @@ function ExtensionList() {
     );
   }, []);
   const lstExt = extData.map((ext) => (
-    <a href={`/extension/${ext.id}`} className="text_lien">
+    <a href={`/extension/${ext.id}`} className="text_lien" key={ext.id}>
       <div className="card">
         <div>nom : {ext.name}</div>
         <div>année de sortie : {ext.releaseYear}</div>

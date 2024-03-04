@@ -13,7 +13,7 @@ function CardForExtension({ id = 1 }) {
     <>
       <div className="header__title key__title">{extData.name}</div>
       {extData.cards
-        ? extData.cards.map((card) => <CardExtension url={card} />)
+        ? extData.cards.map((card) => <CardExtension url={card} key={card} />)
         : null}
     </>
   );

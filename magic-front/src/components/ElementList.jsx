@@ -10,7 +10,7 @@ function ElementList() {
   }, []);
 
   return eltData.map((elt) => (
-    <a href={`element/${elt.id}`} className="text_lien">
+    <a href={`element/${elt.id}`} className="text_lien" key={elt.id}>
       <div className="card">
         <div className="card__header">{elt.name}</div>
         <img

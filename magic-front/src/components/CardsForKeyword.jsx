@@ -13,7 +13,7 @@ function CardsForKeyword({ id = 1 }) {
     <>
       <div className="header__title key__title">{keyData.name}</div>
       {keyData.keywordCards ?  keyData.keywordCards.map((keyCard) => (
-            <CardForKeywordCards url={keyCard} />
+            <CardForKeywordCards url={keyCard} key={keyCard} />
           ))
         : null}
     </>

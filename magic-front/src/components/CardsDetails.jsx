@@ -33,12 +33,14 @@ function CardsDetails({ id = "" }) {
           </div>
         </div>
         <div className="picture__detail">
-          <a href={cardData.pictureUrl}>
-            <img
-              className="picture__size"
-              src={`${URL_CARD.iconId(cardData.id)}`}
-            />
-          </a>
+          {cardData ? (
+            <a href={cardData.pictureUrl}>
+              <img
+                className="picture__size"
+                src={`${URL_CARD.iconId(cardData.id)}`}
+              />
+            </a>
+          ) : null}
         </div>
       </div>
       <div className="card">
