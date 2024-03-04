@@ -9,6 +9,7 @@ function Keyword({ keyword }) {
       fetchKeyword(answer.keyword).then((answer) => setKeyData(answer)),
     );
   }, []);
+
   return (
     <>
       <div>{keyData.name}</div>

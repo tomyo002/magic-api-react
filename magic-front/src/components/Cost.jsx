@@ -13,6 +13,7 @@ function Cost({ cost = "" }) {
       fetchElement(answer.element).then((answer) => setElementData(answer));
     });
   }, []);
+
   return (
     <div>
       {costData.number}{" "}
