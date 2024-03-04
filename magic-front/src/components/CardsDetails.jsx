@@ -4,8 +4,9 @@ import { fetchCard, fetchExtension, fetchType } from "../services/api/cards";
 import CostCard from "./CostCard";
 import Keywords from "./Keywords";
 import Capacities from "./Capacities";
+import {URL_CARD} from "../services/url/BaseUrl.js";
 
-const BASE_URL = "http://localhost:8000/api/cards/";
+
 // eslint-disable-next-line react/prop-types
 function CardsDetails({ id = "" }) {
   const [cardData, setCardData] = useState([]);
@@ -33,7 +34,7 @@ function CardsDetails({ id = "" }) {
           <a href={cardData.pictureUrl}>
             <img
               className="picture__size"
-              src={`${BASE_URL}${id}/picture`}
+              src={`${URL_CARD.iconId(cardData.id)}`}
             />
           </a>
         </div>

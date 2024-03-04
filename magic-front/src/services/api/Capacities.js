@@ -1,6 +1,6 @@
-export const BASE_URL = "http://localhost:8000";
+import {URL_CAPACITY} from "../url/BaseUrl.js";
 
 export async function fetchCapacity(url) {
-  const reponse = await fetch(`${BASE_URL}${url}`);
+  const reponse = await fetch(`${URL_CAPACITY.itemUrl(url)}`);
   return reponse.json();
 }

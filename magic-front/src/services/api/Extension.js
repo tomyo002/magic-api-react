@@ -1,15 +1,16 @@
-export const BASE_URL = "http://localhost:8000";
+import {URL_CARD, URL_EXTENSION} from "../url/BaseUrl.js";
+
 
 export async function fetchAllExtension() {
-  const reponse = await fetch(`${BASE_URL}/api/extensions`);
+  const reponse = await fetch(`${URL_EXTENSION.list}`);
   return reponse.json();
 }
 export async function fetchExtension(id) {
-  const reponse = await fetch(`${BASE_URL}/api/extensions/${id}`);
+  const reponse = await fetch(`${URL_EXTENSION.itemId(id)}`);
   return reponse.json();
 }
 
 export async function fetchCard(url) {
-  const reponse = await fetch(`${BASE_URL}${url}`);
+  const reponse = await fetch(`${URL_CARD.itemUrl(url)}`);
   return reponse.json();
 }
