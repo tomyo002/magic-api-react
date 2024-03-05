@@ -14,7 +14,7 @@ function ElementList() {
         <div className="card__header">{elt.name}</div>
         <img
           className="icon"
-          src={`${URL_ELEMENT.iconUrl(elt.url)}/icon`}
+          src={`${URL_ELEMENT.iconId(elt.id)}`}
           alt={elt.name}
         />
       </div>

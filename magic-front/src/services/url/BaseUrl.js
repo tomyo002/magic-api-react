@@ -19,6 +19,7 @@ export const URL_ELEMENT = {
   list: `${BASE_URL}/api/elements`,
   itemId: (id) => `${BASE_URL}/api/elements/${id}`,
   itemUrl: (url) => `${BASE_URL}${url}`,
+  iconId: (id) => `${BASE_URL}/api/elements/${id}/icon`,
   iconUrl: (url) => `${BASE_URL}${url}/icon`,
 };
 export const URL_EXTENSION = {
